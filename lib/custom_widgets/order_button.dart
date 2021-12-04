@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:fooderorder/activities/second_page.dart';
+import 'package:fooderorder/utils/app_utils.dart';
 
 class OrderButton extends StatelessWidget {
   const OrderButton({Key? key}) : super(key: key);
@@ -6,7 +8,9 @@ class OrderButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-        onPressed: null,
+        onPressed: (){
+          pageIntent(context, const BottomNavActivity());
+        },
         child: const Text(
           'Order Now',
           style: TextStyle(
